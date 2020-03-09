@@ -12,7 +12,7 @@ class Database
 
     public function __construct()
     {
-        //  set DSN(database  source name)
+        //  set DSN(database source name)
         $dsn = 'mysql:host=' . $this->host . '; dbname=' . $this->dbname;
 
         //  Set options

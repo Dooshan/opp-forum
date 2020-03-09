@@ -1,5 +1,4 @@
 <?php
-//Start Session 
 session_start();
 
 // Include Configuration

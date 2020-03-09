@@ -31,7 +31,7 @@ class Template
     // Convert Object to string    
     public function __toString()
     {
-        extract($this->vars); // if an associative array. This function treats keys as variable names and values as variable values. 
+        extract($this->vars); // if is an associative array. This function treats keys as variable names and values as variable values. 
         chdir(dirname($this->template)); //Change directory (Returns directory name component of path)
         ob_start(); //Turn on output buffering
 
@@ -41,7 +41,7 @@ class Template
          */
          
 
-        include basename($this->template);
+        include basename($this->template); // show only file name 
         return ob_get_clean(); //Get current buffer contents and delete current output buffer
     }
 
