@@ -10,7 +10,8 @@
     <!-- Bootstrap core CSS -->
     <link href="<?php echo BASE_URI;?>/templates/css/bootstrap.css" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link href="<?php echo BASE_URI;?>/templates/css/custom.css " rel="stylesheet">
+    <link href="<?php echo BASE_URI;?>/templates/css/custom.css" rel="stylesheet">
+    
     <?php $title = isset($title) ? null : SITE_TITLE ?>
      
   </head>
@@ -46,4 +47,5 @@
 						<h1 class="pull-left"><?= $title ?></h1>
 						<h4 class="pull-right">A simple PHP forum engine</h4>
 						<div class="clearfix"></div>
-						<hr>
+            <hr>
+            <?php displayMessage(); ?>

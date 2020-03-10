@@ -1,4 +1,4 @@
-<?php require('core/init.php');
+<?php require_once ('core/init.php');
 
 //Get template and assign variables
 $template = new Template('templates/create.php');

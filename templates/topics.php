@@ -9,7 +9,7 @@
                     </div>
                     <div class="col-md-10">
                         <div class="topic-content pull-right">
-                            <h3><a href="topic.php"><?= $topic->title; ?></a></h3>
+                            <h3><a href="topic.php?id=<?=$topic->id?>"><?= $topic->title; ?></a></h3>
                             <div class="topic-info">
                                 <a href="topics.php?category=<?= urlFormat($topic->category_id) ?>"><?= $topic->name ?></a> >>
                                 <a href="topics.php?user=<?= urlFormat($topic->user_id) ?>"><?= $topic->username ?></a> >>
@@ -21,10 +21,16 @@
                 </div>
             </li>
         <?php endforeach; ?>
-    <?php else : ?>
-        <p>No topic to display</p>
-    <?php endif; ?>
+</ul>
+<?php else : ?>
+    <p>No topic to display</p>
+<?php endif; ?>
 
+<h3>Forum Statistics</h3>
+<ul>
+    <li>Total Number of Users: <strong><?php echo $totalUsers; ?></strong></li>
+    <li>Total Number of Topics: <strong><?php echo $totalTopics; ?></strong></li>
+    <li>Total Number of Categories: <strong><?php echo $totalCategories; ?></strong></li>
 </ul>
 
 <?php include "includes/footer.php" ?>
